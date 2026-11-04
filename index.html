@@ -3,10 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mojtaba</title>
-<meta name="description" content="Mojtaba Hossaini, software engineer.">
+<title>M.H · MindHorizon</title>
+<meta name="description" content="M.H · MindHorizon. Mojtaba Hossaini: software, poetry and cinema.">
 <meta name="theme-color" content="#07070a">
 <style>
+  /* subset fonts (only the letters used), self-hosted because Google Fonts is unreliable from Iran */
+  @font-face { font-family: "Instrument Serif"; font-style: italic; src: url(fonts/instrument-serif-italic.woff2) format("woff2"); font-display: swap; }
+  @font-face { font-family: "JetBrains Mono"; font-weight: 300; src: url(fonts/jetbrains-mono-300.woff2) format("woff2"); font-display: swap; }
   * { box-sizing: border-box; margin: 0; }
   html, body { height: 100%; }
   /* no web fonts on purpose: Google Fonts is unreliable from Iran */
@@ -17,9 +20,12 @@
           background: radial-gradient(ellipse at center, rgba(7,7,10,.6) 0%, rgba(7,7,10,.05) 50%, rgba(7,7,10,.7) 100%); }
   main { position: relative; height: 100%; display: grid; place-content: center; justify-items: center;
          gap: 30px; padding: 16px; text-align: center; pointer-events: none; }
-  h1 { font-weight: 200; line-height: 1; letter-spacing: -.05em; font-size: clamp(3.6rem, 16vw, 10.5rem); padding: 0 .06em;
+  h1 { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; line-height: 1; letter-spacing: -.01em;
+       font-size: clamp(5rem, 22vw, 13rem); padding: 0 .08em;
        background: linear-gradient(120deg, #fff 35%, #7dd3c7 65%, #c4b5fd 92%); background-size: 200% 100%;
        -webkit-background-clip: text; background-clip: text; color: transparent; animation: sheen 9s ease-in-out infinite alternate; }
+  .sub { margin-top: -14px; font-family: "JetBrains Mono", ui-monospace, monospace; font-weight: 300; font-size: .75rem;
+         letter-spacing: .5em; padding-left: .5em; color: #a1a1aa; }
   .line { width: 56px; height: 1px; background: linear-gradient(90deg, transparent, #7dd3c7, transparent); }
   nav { display: flex; gap: 18px; pointer-events: auto; }
   nav a { width: 50px; height: 50px; display: grid; place-items: center; border-radius: 50%;
@@ -44,7 +50,8 @@
 <canvas id="bg" aria-hidden="true"></canvas>
 <div class="veil"></div>
 <main>
-  <h1 class="in d1">Mojtaba.</h1>
+  <h1 class="in d1" aria-label="M.H, Mojtaba Hossaini">M.H</h1>
+  <p class="sub in d1">MIND · HORIZON</p>
   <div class="line in d2"></div>
   <nav class="in d3">
     <a href="https://www.linkedin.com/in/mojtaba-hussaini" rel="me noopener" aria-label="LinkedIn">
@@ -56,7 +63,7 @@
   </nav>
 </main>
 <!-- shortcut: points at the github.io URL; switch to the money subdomain once the custom domain is set -->
-<a class="work in d4" href="https://mojtaba-hossaini.github.io/money-manager-site/"><span>01</span>Money Manager</a>
+<a class="work in d4" href="https://mojtaba-hossaini.github.io/money-manager-site/"><span>01</span>Money Footprint</a>
 <script>
 // Flow field: particles drift along a slowly morphing sin/cos field and part around the cursor.
 const HUE = 165, HUE_SPAN = 95; // teal -> violet
